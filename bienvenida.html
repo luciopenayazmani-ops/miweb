@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel del Usuario</title>
+  <link rel="stylesheet" href="bienvenida.css">
+</head>
+<body>
+
+  <header>
+    <h1 id="saludo">Hola, Usuario 👋</h1>
+    <p id="hora"></p>
+    <button id="logout">Cerrar sesión</button>
+  </header>
+
+  <main>
+    <nav>
+      <button class="tab active" data-tab="tareas">📋 Tareas</button>
+      <button class="tab" data-tab="notas">📝 Notas</button>
+      <button class="tab" data-tab="recordatorios">⏰ Recordatorios</button>
+    </nav>
+
+    <section id="tareas" class="content active">
+      <h2>Tus Tareas</h2>
+      <input type="text" id="nuevaTarea" placeholder="Escribe una tarea...">
+      <button id="agregarTarea">Agregar</button>
+      <ul id="listaTareas"></ul>
+    </section>
+
+    <section id="notas" class="content">
+      <h2>Tus Notas</h2>
+      <textarea id="notaTexto" placeholder="Escribe una nota..."></textarea>
+      <button id="guardarNota">Guardar Nota</button>
+      <div id="notasGuardadas"></div>
+    </section>
+
+    <section id="recordatorios" class="content">
+      <h2>Recordatorios</h2>
+      <input type="text" id="nuevoRecordatorio" placeholder="Nuevo recordatorio...">
+      <input type="datetime-local" id="fechaRecordatorio">
+      <button id="agregarRecordatorio">Agregar</button>
+      <ul id="listaRecordatorios"></ul>
+    </section>
+  </main>
+
+  <audio id="sonidoCompletar" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_29c3b3b49f.mp3?filename=correct-2-46134.mp3"></audio>
+
+  <div class="background"></div>
+
+  <script src="bienvenida.js"></script>
+</body>
+</html>
